@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mubeen Ayomide Kolade | IT Support Analyst Portfolio</title>
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="Portfolio of Mubeen Ayomide Kolade - IT Support Analyst specializing in Cyber Security, Networking, and Technical Troubleshooting. Based in Basildon, UK.">
+    <meta name="keywords"
+        content="IT Support Analyst, Cybersecurity, Networking, CompTIA, Portfolio, Mubeen Ayomide Kolade">
+    <meta property="og:title" content="Mubeen Ayomide Kolade - IT Support Analyst">
+    <meta property="og:description" content="Military-grade personal portfolio built for Mubeen Ayomide Kolade.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* Dark Mode (Default) */
+            --bg: #000a00;
+            --bg2: #020f02;
+            --card: #040f04;
+            --border: #0d2e0d;
+            --border2: #1a4a1a;
+            --green: #00ff41;
+            --green2: #00cc33;
+            --green3: #007a1f;
+            --cyan: #00ffcc;
+            --amber: #ffaa00;
+            --red: #ff3333;
+            --text: #d0f0d0;
+            --muted: #3a6b3a;
+
+            --nav-height: 52px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #f0fff0;
+                --bg2: #e4f7e4;
+                --card: #ffffff;
+                --border: #b8deb8;
+                --border2: #7ec87e;
+                --green: #0a7c0a;
+                --green2: #0d9e0d;
+                --green3: #4ab84a;
+                --cyan: #007755;
+                --amber: #b87700;
+                --red: #cc1111;
+                --text: #1a3a1a;
+                --muted: #5a8a5a;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Source Sans 3', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Scanline Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.05) 0px,
+                    rgba(0, 0, 0, 0.05) 1px,
+                    transparent 1px,
+                    transparent 3px);
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--green3);
+            border-radius: 3px;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .rajdhani {
+            font-family: 'Rajdhani', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .mono {
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        /* Section Dividers */
+        section {
+            position: relative;
+            padding: 80px 5%;
+            border-bottom: 1px solid transparent;
+            border-image: linear-gradient(90deg, var(--green3), transparent) 1;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background: rgba(2, 15, 2, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--green);
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            font-size: 1.25rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 10px;
+            color: var(--muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 900px) {
+            .hero-side-panel {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --nav-height: 60px;
+            }
+
+            body {
+                font-size: 16px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .desktop-only {
+                display: none;
+            }
+
+            .section {
+                padding: 60px 5%;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .certs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Hero Section Base */
+        #hero {
+            height: 100vh;
+            padding-top: var(--nav-height);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-bottom: none;
+        }
+
+        .hero-title-bar {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .hero-title-bar h1 {
+            color: var(--green);
+            font-size: clamp(20px, 5vw, 38px);
+            letter-spacing: 0.2em;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+            margin-bottom: 4px;
+        }
+
+        .hero-title-bar p {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--green3);
+            font-size: clamp(9px, 2vw, 13px);
+            letter-spacing: 0.15em;
+        }
+
+        /* 3-Column Grid */
+        .hero-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 220px 1fr 220px;
+            border-top: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .panel {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-bordered {
+            border-right: 1px solid var(--border);
+        }
+
+        .panel-left {
+            border-right: 1px solid var(--border);
+        }
+
+        .panel-right {
+            border-left: 1px solid var(--border);
+        }
+
+        .panel-title {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 10px;
+            color: var(--green);
+            padding: 10px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 255, 65, 0.05);
+        }
+
+        /* Animations */
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes bobble {
+
+            0%,
+            100% {
+                transform: translate(-50%, 0);
+            }
+
+            50% {
+                transform: translate(-50%, 10px);
+            }
+        }
+
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+
+        /* Fade Up Utility */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Generic Section Heading */
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-header .mono {
+            color: var(--green);
+            font-size: 14px;
+            letter-spacing: 0.2em;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--text);
+            margin-top: -5px;
+        }
+
+        /* About Grid */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-image-container {
+            position: relative;
+            border: 2px solid var(--border2);
+            padding: 10px;
+            background: var(--bg2);
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+        }
+
+        .about-image-container::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: 20px;
+            height: 20px;
+            border-top: 2px solid var(--green);
+            border-left: 2px solid var(--green);
+        }
+
+        .about-image-container::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            border-bottom: 2px solid var(--green);
+            border-right: 2px solid var(--green);
+        }
+
+        .about-img {
+            width: 100%;
+            display: block;
+            filter: grayscale(0.2) contrast(1.1);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            border-color: var(--green3);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .skill-group h3 {
+            color: var(--green);
+            font-size: 14px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 10px;
+            color: var(--green);
+            border: 1px solid var(--green3);
+            background: rgba(0, 255, 65, 0.05);
+            padding: 6px 14px;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .skill-badge:hover {
+            border-color: var(--green);
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+            background: rgba(0, 255, 65, 0.1);
+        }
+
+        .icon-svg {
+            width: 32px;
+            height: 32px;
+            fill: none;
+            stroke: var(--green);
+            stroke-width: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .cv-btn {
+            background: var(--green);
+            color: var(--bg);
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            font-size: 10px;
+        }
+
+        .cv-btn:hover {
+            background: var(--cyan);
+            box-shadow: 0 0 10px var(--cyan);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 1px solid var(--green3);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -35.5px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: var(--green);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--green);
+        }
+
+        .experience-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--green3);
+            border-radius: 0 10px 10px 0;
+            padding: 25px;
+            transition: var(--transition);
+        }
+
+        .experience-card:hover {
+            border-left-color: var(--green);
+            transform: translateX(4px);
+        }
+
+        .experience-card h4 {
+            font-size: 1.25rem;
+            color: var(--text);
+        }
+
+        .experience-card .role {
+            color: var(--cyan);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 14px;
+            margin: 5px 0 15px 0;
+        }
+
+        .experience-card ul {
+            list-style: none;
+        }
+
+        .experience-card li::before {
+            content: ">";
+            color: var(--green3);
+            margin-right: 10px;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        /* Certs Grid */
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .cert-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card:hover {
+            border-color: var(--green3);
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.15);
+        }
+
+        .cert-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(0, 255, 65, 0.05), transparent 70%);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .cert-card:hover::before {
+            opacity: 1;
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .panel-left,
+            .panel-right {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .about-grid,
+            .skills-grid,
+            .education-grid,
+            .contact-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .certs-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .desktop-only {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .certs-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="nav-logo">MUBEEN // CORE_OPS</a>
+        <div class="nav-links mono">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#certs">Certs</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <a href="#" class="cv-btn">DOWNLOAD CV</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-title-bar">
+            <h1>IT Support Analyst</h1>
+            <p>[ NETWORK OPERATIONS CENTER — ACTIVE SCAN ]</p>
+        </div>
+
+        <div class="hero-grid">
+            <!-- Left Panel: System Log -->
+            <aside class="panel panel-left">
+                <div class="panel-title">> SYSTEM LOG</div>
+                <div id="log-feed" class="mono"
+                    style="font-size: 9px; padding: 10px; flex: 1; overflow-y: hidden; display: flex; flex-direction: column; gap: 4px;">
+                    <!-- JS will populate logs here -->
+                </div>
+                <div style="padding: 0 10px 10px 10px;">
+                    <span class="blink"
+                        style="display: inline-block; width: 6px; height: 12px; background: var(--green);"></span>
+                </div>
+            </aside>
+
+            <!-- Center Panel: Radar -->
+            <main class="panel center-panel"
+                style="display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid var(--border);">
+                <canvas id="radar-canvas"></canvas>
+
+                <!-- Scroll CTA -->
+                <a href="#about" class="mono"
+                    style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); text-decoration: none; color: var(--green3); font-size: 10px; text-align: center; animation: bobble 2s ease-in-out infinite; cursor: pointer;">
+                    SCROLL TO EXPLORE<br>↓
+                </a>
+            </main>
+
+            <!-- Right Panel: Stats/Tickets -->
+            <aside class="panel panel-right">
+                <div class="panel-title">> ACTIVE TICKETS</div>
+                <div id="ticket-feed" class="mono"
+                    style="padding: 10px; flex: 1; border-bottom: 1px solid var(--border); font-size: 9px;">
+                    <!-- Static entries as per PRD -->
+                    <div class="ticket-row"
+                        style="margin-bottom: 12px; border-left: 3px solid #ff3333; padding-left: 8px;">
+                        <div style="color: #ff3333; font-weight: bold;">#4821 [CRIT]</div>
+                        <div style="color: var(--muted); font-size: 8px;">VPN timeout</div>
+                    </div>
+                    <div class="ticket-row"
+                        style="margin-bottom: 12px; border-left: 3px solid #00cc33; padding-left: 8px;">
+                        <div style="color: #00cc33; font-weight: bold;">#4822 [LOW]</div>
+                        <div style="color: var(--muted); font-size: 8px;">Printer offline</div>
+                    </div>
+                    <div class="ticket-row"
+                        style="margin-bottom: 12px; border-left: 3px solid #ffaa00; padding-left: 8px;">
+                        <div style="color: #ffaa00; font-weight: bold;">#4823 [MED]</div>
+                        <div style="color: var(--muted); font-size: 8px;">Email sync fail</div>
+                    </div>
+                    <div class="ticket-row"
+                        style="margin-bottom: 12px; border-left: 3px solid #00ffcc; padding-left: 8px;">
+                        <div style="color: #00ffcc; font-weight: bold;">#4824 [LOW]</div>
+                        <div style="color: var(--muted); font-size: 8px;">RAM upgrade</div>
+                    </div>
+                    <div class="ticket-row"
+                        style="margin-bottom: 12px; border-left: 3px solid #ff3333; padding-left: 8px;">
+                        <div style="color: #ff3333; font-weight: bold;">#4825 [HIGH]</div>
+                        <div style="color: var(--muted); font-size: 8px;">FW rule conflict</div>
+                    </div>
+                </div>
+
+                <div class="panel-title">> NET STATISTICS</div>
+                <div id="stats-panel" class="mono"
+                    style="padding: 10px; flex: 1; border-bottom: 1px solid var(--border); font-size: 9px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span>LATENCY</span> <span style="color: var(--green2);">12ms</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span>PACKET LOSS</span> <span style="color: var(--amber);">0.3%</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span>UPTIME</span> <span style="color: var(--green2);">99.97%</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span>OPEN PORTS</span> <span style="color: var(--cyan);">14</span>
+                    </div>
+                </div>
+
+                <div class="panel-title">> HOST INFO</div>
+                <div class="mono" style="padding: 10px; font-size: 9px; color: var(--muted);">
+                    <div>HOST: NOC-WORKSTATION-01</div>
+                    <div>IP: 192.168.1.100</div>
+                    <div>MAC: A4:C3:F0:12:88:EE</div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="mono"
+            style="height: 38px; background: var(--bg2); border-top: 1px solid var(--border); display: flex; align-items: center; padding: 0 20px; font-size: 9px; justify-content: space-between;">
+            <div>STATUS: <span style="color: var(--green);">ALL SYSTEMS OPERATIONAL</span></div>
+            <div class="desktop-only">TICKETS: <span style="color: var(--amber);">5 OPEN | 12 RESOLVED TODAY</span>
+            </div>
+            <div class="desktop-only">SCAN: <span style="color: var(--cyan);">172.16.0.0/24 IN PROGRESS</span></div>
+            <div>ANALYST: <span style="color: var(--green);">ONLINE</span></div>
+        </div>
+    </section>
+
+    <!-- SECTION: ABOUT -->
+    <section id="about" class="section">
+        <div class="section-header fade-up">
+            <div class="mono">// 01_OVERVIEW</div>
+            <h2 class="rajdhani">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="fade-up">
+                <div class="about-image-container">
+                    <img src="selfie.jpeg" alt="Mubeen Ayomide Kolade" class="about-img">
+                </div>
+            </div>
+
+            <div class="fade-up">
+                <p style="margin-bottom: 20px; font-size: 1.15rem; line-height: 1.7;">I am <strong>Mubeen Ayomide
+                        Kolade</strong>, a dynamic IT professional with a BSc in Cyber Security from Caleb University,
+                    Lagos. I specialize in troubleshooting complex IT issues, network maintenance, and cloud computing.
+                </p>
+                <p style="margin-bottom: 25px; font-size: 1.15rem; line-height: 1.7;">My technical journey is backed by
+                    a CompTIA IT Fundamentals (ITF+) certification and hands-on experience with Microsoft 365, Ethical
+                    Hacking, and Network Security.</p>
+
+                <div class="stat-grid" style="margin-bottom: 30px;">
+                    <div class="stat-card">
+                        <svg class="icon-svg" viewBox="0 0 24 24">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                        </svg>
+                        <div class="mono" style="font-size: 10px; color: var(--muted); margin-bottom: 8px;">DEGREE</div>
+                        <div style="font-size: 1rem; font-weight: 600;">BSc Cyber Security</div>
+                    </div>
+                    <div class="stat-card">
+                        <svg class="icon-svg" viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <div class="mono" style="font-size: 10px; color: var(--muted); margin-bottom: 8px;">LOCATION
+                        </div>
+                        <div style="font-size: 1rem; font-weight: 600;">Essex, UK</div>
+                    </div>
+                    <div class="stat-card">
+                        <svg class="icon-svg" viewBox="0 0 24 24">
+                            <rect x="2" y="7" width="20" height="14" rx="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                        <div class="mono" style="font-size: 10px; color: var(--muted); margin-bottom: 8px;">EXPERIENCE
+                        </div>
+                        <div style="font-size: 1rem; font-weight: 600;">2+ Years IT</div>
+                    </div>
+                    <div class="stat-card">
+                        <svg class="icon-svg" viewBox="0 0 24 24">
+                            <circle cx="12" cy="8" r="7" />
+                            <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12" />
+                        </svg>
+                        <div class="mono" style="font-size: 10px; color: var(--muted); margin-bottom: 8px;">CERTIFIED
+                        </div>
+                        <div style="font-size: 1rem; font-weight: 600;">CompTIA ITF+</div>
+                    </div>
+                </div>
+
+                <a href="#" class="cv-btn"
+                    style="display: inline-block; padding: 15px 32px; font-size: 15px; font-weight: 700;">[ DOWNLOAD
+                    FULL CV / PDF ]</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: SKILLS -->
+    <section id="skills">
+        <div class="section-header fade-up">
+            <div class="mono">// 02_CAPABILITIES</div>
+            <h2 class="rajdhani">Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-group fade-up">
+                <h3 class="mono">// TECHNICAL STACK</h3>
+                <div class="badge-container">
+                    <span class="skill-badge">IT Support</span>
+                    <span class="skill-badge">Troubleshooting</span>
+                    <span class="skill-badge">Networking & Security</span>
+                    <span class="skill-badge">Cloud Computing</span>
+                    <span class="skill-badge">Microsoft 365</span>
+                    <span class="skill-badge">Ethical Hacking</span>
+                    <span class="skill-badge">Cybersecurity</span>
+                    <span class="skill-badge">CompTIA ITF+</span>
+                    <span class="skill-badge">Hardware Setup</span>
+                </div>
+            </div>
+
+            <div class="skill-group fade-up">
+                <h3 class="mono">// CORE COMPETENCIES</h3>
+                <div class="badge-container">
+                    <span class="skill-badge">CRM Systems</span>
+                    <span class="skill-badge">Communication</span>
+                    <span class="skill-badge">Problem Solving</span>
+                    <span class="skill-badge">Multitasking</span>
+                    <span class="skill-badge">Travel Ticketing</span>
+                    <span class="skill-badge">Admin Support</span>
+                    <span class="skill-badge">Health Monitoring</span>
+                    <span class="skill-badge">Documentation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: EXPERIENCE -->
+    <section id="experience">
+        <div class="section-header fade-up">
+            <div class="mono">// 03_HISTORY</div>
+            <h2 class="rajdhani">Work Experience</h2>
+        </div>
+
+        <div class="timeline">
+            <!-- New Entry: INFRATECH SUPPORT -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card fade-up">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h4>INFRATECH SUPPORT</h4>
+                            <div class="role">> ROLE: IT Support Analyst (Internship)</div>
+                        </div>
+                        <div class="mono" style="color: var(--amber); font-size: 12px;">FEB 2026 — PRESENT</div>
+                    </div>
+                    <div class="mono" style="color: var(--muted); font-size: 10px; margin-bottom: 15px;">LAGOS, NIGERIA
+                        / REMOTE</div>
+                    <ul>
+                        <li>Assisting in network infrastructure monitoring and maintenance</li>
+                        <li>Troubleshooting company-wide hardware and software issues</li>
+                        <li>Managing user accounts and access via Microsoft 365 Admin Center</li>
+                        <li>Documenting technical resolutions and system updates</li>
+                        <li>Optimizing workstation performance and security patches</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Entry: LERA HEALTHCARE -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card fade-up">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h4>LERA HEALTHCARE LIMITED</h4>
+                            <div class="role">> ROLE: Healthcare Assistant</div>
+                        </div>
+                        <div class="mono" style="color: var(--amber); font-size: 12px;">NOV 2025 — PRESENT</div>
+                    </div>
+                    <div class="mono" style="color: var(--muted); font-size: 10px; margin-bottom: 15px;">TILBURY, ESSEX,
+                        UK</div>
+                    <ul>
+                        <li>Mobility and physical support for patients</li>
+                        <li>Personal care assistance and hygiene support</li>
+                        <li>Administrative and environmental task management</li>
+                        <li>Emotional and social support for service users</li>
+                        <li>Health monitoring, observation and reporting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Entry 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card fade-up">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h4>GLOBAL KAZ CO & TRAVEL & TOUR LTD</h4>
+                            <div class="role">> ROLE: Operating Ticket Officer</div>
+                        </div>
+                        <div class="mono" style="color: var(--amber); font-size: 12px;">2023 — 2025</div>
+                    </div>
+                    <div class="mono" style="color: var(--muted); font-size: 10px; margin-bottom: 15px;">LAGOS, NIGERIA
+                    </div>
+                    <ul>
+                        <li>Planned and organized transportation and accommodations</li>
+                        <li>Handled customer queries and resolution</li>
+                        <li>Researched destinations, pricing, and reviews</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CERTS -->
+    <section id="certs">
+        <div class="section-header fade-up">
+            <div class="mono">// 04_ACCREDITATIONS</div>
+            <h2 class="rajdhani">Certifications</h2>
+        </div>
+        <div class="certs-grid">
+            <div class="cert-card fade-up">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <rect x="2" y="3" width="20" height="18" rx="2" />
+                    <path d="M7 8h10M7 12h10M7 16h6" />
+                </svg>
+                <h5 style="font-size: 14px; margin-bottom: 10px;">Intro to Databases & Dev</h5>
+                <div class="mono" style="font-size: 9px; color: var(--muted);">CUL TECHNOLOGIES</div>
+            </div>
+            <div class="cert-card fade-up">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                </svg>
+                <h5 style="font-size: 14px; margin-bottom: 10px;">Microsoft 365 Introduction</h5>
+                <div class="mono" style="font-size: 9px; color: var(--muted);">CALEB UNIVERSITY</div>
+            </div>
+            <div class="cert-card fade-up">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path d="M12 1v22M5 12h14M2 17l10 5 10-5M2 7l10 5 10-5" />
+                </svg>
+                <h5 style="font-size: 14px; margin-bottom: 10px;">Networking & Security</h5>
+                <div class="mono" style="font-size: 9px; color: var(--muted);">COMPTIA PARTNER</div>
+            </div>
+            <div class="cert-card fade-up">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <path d="M8 21h8M12 17v4" />
+                </svg>
+                <h5 style="font-size: 14px; margin-bottom: 10px;">IT Fundamentals (ITF+)</h5>
+                <div class="mono" style="font-size: 9px; color: var(--muted);">CUL TECHNOLOGIES</div>
+            </div>
+            <div class="cert-card fade-up">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path
+                        d="M17.5 19c.7 0 1.2-.6 1.2-1.2V6.2c0-.7-.5-1.2-1.2-1.2h-11c-.7 0-1.2.5-1.2 1.2v11.6c0 .6.5 1.2 1.2 1.2h11z" />
+                    <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+                <h5 style="font-size: 14px; margin-bottom: 10px;">Cloud Computing Fund.</h5>
+                <div class="mono" style="font-size: 9px; color: var(--muted);">CALEB UNIVERSITY</div>
+            </div>
+            <div class="cert-card fade-up">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path d="M12 15l-2 5h4l-2-5z" />
+                    <circle cx="12" cy="9" r="6" />
+                    <path d="M9 21.5c-4.5-1-4.5-4-4.5-4" />
+                </svg>
+                <h5 style="font-size: 14px; margin-bottom: 10px;">CompTIA Computer Basics</h5>
+                <div class="mono" style="font-size: 9px; color: var(--muted);">AUTHORIZED PARTNER</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: EDUCATION -->
+    <section id="education">
+        <div class="section-header fade-up">
+            <div class="mono">// 05_ACADEMIA</div>
+            <h2 class="rajdhani">Education</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;" class="education-grid">
+            <div class="stat-card fade-up">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                </svg>
+                <h4 class="rajdhani" style="color: var(--text);">BSc. Cyber Security</h4>
+                <div class="mono" style="color: var(--green); margin-bottom: 10px;">CALEB UNIVERSITY</div>
+                <div class="mono" style="font-size: 11px; color: var(--muted);">2022 | IMOTA, LAGOS, NIGERIA</div>
+            </div>
+
+            <div class="stat-card fade-up">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
+                <h4 class="rajdhani" style="color: var(--text);">WASSCE Certificate</h4>
+                <div class="mono" style="color: var(--green); margin-bottom: 10px;">FRONTRUNNER CITY COLLEGE</div>
+                <div class="mono" style="font-size: 11px; color: var(--muted);">2017 — 2022 | NIGERIA</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CONTACT -->
+    <section id="contact">
+        <div class="section-header fade-up">
+            <div class="mono">// 06_COMMUNICATION</div>
+            <h2 class="rajdhani">Get In Touch</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px;" class="contact-grid">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <a href="mailto:kolademubeen04@gmail.com" class="stat-card fade-up"
+                    style="text-decoration: none; display: block;">
+                    <svg class="icon-svg" style="width: 20px; height: 20px; margin-bottom: 5px;" viewBox="0 0 24 24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    <div style="font-size: 14px; color: var(--green);">kolademubeen04@gmail.com</div>
+                </a>
+                <a href="tel:+447491474676" class="stat-card fade-up" style="text-decoration: none; display: block;">
+                    <svg class="icon-svg" style="width: 20px; height: 20px; margin-bottom: 5px;" viewBox="0 0 24 24">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    <div style="font-size: 14px; color: var(--green);">+44 7491 474676</div>
+                </a>
+                <div class="stat-card fade-up">
+                    <svg class="icon-svg" style="width: 20px; height: 20px; margin-bottom: 5px;" viewBox="0 0 24 24">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <div style="font-size: 14px; color: var(--text);">106 Lincoln Road, Basildon, SS14 3RA</div>
+                </div>
+                <a href="https://www.linkedin.com/in/mubeen-kolade-6773423b9" target="_blank" class="stat-card fade-up"
+                    style="text-decoration: none; display: block;">
+                    <svg class="icon-svg" style="width: 20px; height: 20px; margin-bottom: 5px;" viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                    <div style="font-size: 14px; color: var(--green);">mubeen-kolade-6773423b9</div>
+                </a>
+            </div>
+
+            <div class="stat-card fade-up" style="padding: 30px;">
+                <form id="contact-form" action="https://api.staticforms.xyz/submit" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                    <!-- Access Key from https://www.staticforms.xyz -->
+                    <!-- Note: For static HTML, this key is required here. .env is provided for build-tools usage. -->
+                    <input type="hidden" name="accessKey" value="sf_3189bc2ae28ac8698509f32d"> 
+                    <input type="hidden" name="replyTo" value="@">
+                    <div>
+                        <label class="mono" style="font-size: 9px; color: var(--muted); margin-bottom: 8px; display: block;">// NAME</label>
+                        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: 'Share Tech Mono'; outline: none;">
+                    </div>
+                    <div>
+                        <label class="mono" style="font-size: 9px; color: var(--muted); margin-bottom: 8px; display: block;">// EMAIL</label>
+                        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: 'Share Tech Mono'; outline: none;">
+                    </div>
+                    <div>
+                        <label class="mono" style="font-size: 9px; color: var(--muted); margin-bottom: 8px; display: block;">// MESSAGE</label>
+                        <textarea rows="4" name="message" placeholder="How can I help?" required style="width: 100%; padding: 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: 'Share Tech Mono'; outline: none;"></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn" class="mono" style="background: transparent; border: 1px solid var(--green3); color: var(--green); padding: 12px; border-radius: 6px; cursor: pointer; transition: var(--transition);">
+                        >_ SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mono"
+        style="padding: 28px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); background: var(--bg2);">
+        <div>Designed & built for <span style="color: var(--green); font-weight: bold;">Mubeen Ayomide Kolade</span>
+        </div>
+        <div class="desktop-only">> Built with purpose. <span style="color: var(--green);">Shipped with pride.</span>
+        </div>
+    </footer>
+
+    <script>
+        // --- LOG FEED LOGIC ---
+        const logFeed = document.getElementById('log-feed');
+        const logs = [
+            { level: 'INFO', msg: 'User login: admin', color: 'var(--green2)' },
+            { level: 'WARN', msg: 'High CPU on SRV-02', color: 'var(--amber)' },
+            { level: 'INFO', msg: 'Backup completed OK', color: 'var(--green2)' },
+            { level: 'ERROR', msg: 'VPN tunnel dropped', color: 'var(--red)' },
+            { level: 'INFO', msg: 'Ticket #4821 opened', color: 'var(--green)' },
+            { level: 'WARN', msg: 'Disk usage >80%', color: 'var(--amber)' },
+            { level: 'INFO', msg: 'Patch applied: KB9921', color: 'var(--green2)' },
+            { level: 'ERROR', msg: 'Firewall rule deny', color: 'var(--red)' },
+            { level: 'INFO', msg: 'Port scan blocked', color: 'var(--green2)' },
+            { level: 'INFO', msg: 'Switch SW-01 online', color: 'var(--green2)' },
+            { level: 'WARN', msg: 'Memory leak detected', color: 'var(--amber)' },
+            { level: 'INFO', msg: 'DNS resolved OK', color: 'var(--green2)' },
+            { level: 'INFO', msg: 'NTP sync success', color: 'var(--green2)' },
+            { level: 'ERROR', msg: 'Auth fail x3: 10.0.4', color: 'var(--red)' },
+            { level: 'INFO', msg: 'Ticket #4822 closed', color: 'var(--green2)' }
+        ];
+
+        let logIdx = 0;
+        function getTimestamp() {
+            const now = new Date();
+            return now.toTimeString().split(' ')[0];
+        }
+
+        function addLog() {
+            const log = logs[logIdx];
+            const div = document.createElement('div');
+            div.style.borderBottom = '1px solid var(--border)';
+            div.style.paddingBottom = '4px';
+            div.innerHTML = `<span style="color: ${log.color}">[${log.level}]</span> <span style="color: var(--muted)">${getTimestamp()} ${log.msg}</span>`;
+
+            logFeed.prepend(div);
+            if (logFeed.children.length > 15) logFeed.lastElementChild.remove();
+
+            logIdx = (logIdx + 1) % logs.length;
+            setTimeout(addLog, 900);
+        }
+        addLog();
+
+        // --- CONTACT FORM AJAX ---
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'TRANSMITTING...';
+            
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('https://api.staticforms.xyz/submit', {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: { 'Content-Type': 'application/json' }
+                });
+
+                if (response.ok) {
+                    const successLog = { level: 'INFO', msg: 'Message transmitted successfully', color: 'var(--cyan)' };
+                    const div = document.createElement('div');
+                    div.style.borderBottom = '1px solid var(--border)';
+                    div.style.paddingBottom = '4px';
+                    div.innerHTML = `<span style="color: ${successLog.color}">[${successLog.level}]</span> <span style="color: var(--muted)">${getTimestamp()} ${successLog.msg}</span>`;
+                    logFeed.prepend(div);
+                    
+                    submitBtn.textContent = 'MESSAGE SENT';
+                    contactForm.reset();
+                } else {
+                    throw new Error();
+                }
+            } catch (err) {
+                submitBtn.textContent = 'RETRY SEND';
+                submitBtn.disabled = false;
+            }
+        });
+
+        // --- RADAR CANVAS LOGIC ---
+        const canvas = document.getElementById('radar-canvas');
+        const ctx = canvas.getContext('2d');
+        let angle = 0;
+
+        const blips = [
+            { label: 'FW-MAIN', angle: 0.6, radius: 0.52, color: '#00ffcc', alpha: 0 },
+            { label: 'SW-01', angle: 1.8, radius: 0.38, color: '#00ff41', alpha: 0 },
+            { label: 'PC-14', angle: 2.5, radius: 0.68, color: '#00ff41', alpha: 0 },
+            { label: 'SRV-02', angle: 3.4, radius: 0.55, color: '#00ff41', alpha: 0 },
+            { label: 'AP-07', angle: 4.1, radius: 0.42, color: '#00ff41', alpha: 0 },
+            { label: 'THREAT', angle: 1.1, radius: 0.30, color: '#ff3333', alpha: 0 },
+            { label: 'WARN', angle: 5.2, radius: 0.60, color: '#ffaa00', alpha: 0 }
+        ];
+
+        function resizeCanvas() {
+            const size = Math.min(canvas.parentElement.offsetWidth - 40, 560);
+            canvas.width = size;
+            canvas.height = size;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        let isLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        let accentGreen, mutedGreen, cyanCol, trailBase, ringColor;
+
+        function updateThemeColors() {
+            const styles = getComputedStyle(document.documentElement);
+            accentGreen = styles.getPropertyValue('--green').trim();
+            mutedGreen = styles.getPropertyValue('--green3').trim();
+            cyanCol = styles.getPropertyValue('--cyan').trim();
+            isLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+            ringColor = isLight ? 'rgba(10, 124, 10, 0.2)' : 'rgba(0, 180, 50, 0.18)';
+            trailBase = isLight ? '10, 124, 10' : '0, 255, 65';
+        }
+        updateThemeColors();
+
+        window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', updateThemeColors);
+
+        const radarAlpha = 0.05;
+
+        function drawRadar() {
+            const w = canvas.width;
+            const h = canvas.height;
+            const cx = w / 2;
+            const cy = h / 2;
+            const r = (w / 2) * 0.85;
+
+            ctx.clearRect(0, 0, w, h);
+
+            // 1. Radial background
+            const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+            grad.addColorStop(0, `rgba(${trailBase}, ${radarAlpha})`);
+            grad.addColorStop(1, 'transparent');
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.arc(cx, cy, r, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 2. Rings
+            ctx.strokeStyle = ringColor;
+            ctx.lineWidth = 1;
+            for (let i = 1; i <= 5; i++) {
+                ctx.beginPath();
+                ctx.arc(cx, cy, (r / 5) * i, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            // 3. Crosshairs
+            ctx.beginPath();
+            ctx.moveTo(cx - r, cy); ctx.lineTo(cx + r, cy);
+            ctx.moveTo(cx, cy - r); ctx.lineTo(cx, cy + r);
+            ctx.stroke();
+
+            // 5. Labels
+            ctx.fillStyle = mutedGreen;
+            ctx.font = '9px "Share Tech Mono"';
+            ctx.textAlign = 'center';
+            const degrees = [0, 45, 90, 135, 180, 225, 270, 315];
+            degrees.forEach(deg => {
+                const a = (deg - 90) * (Math.PI / 180);
+                const lx = cx + (r + 15) * Math.cos(a);
+                const ly = cy + (r + 15) * Math.sin(a);
+                ctx.fillText(deg + '°', lx, ly + 3);
+            });
+
+            // 6. Sweep Trail
+            for (let i = 0; i < 60; i++) {
+                const trailAngle = angle - (i * 0.015);
+                const opacity = (0.35 * (1 - i / 60)).toFixed(3);
+                ctx.fillStyle = `rgba(${trailBase}, ${opacity})`;
+                ctx.beginPath();
+                ctx.moveTo(cx, cy);
+                ctx.arc(cx, cy, r, trailAngle, trailAngle + 0.02);
+                ctx.fill();
+            }
+
+            // 7. Sweep Line
+            ctx.strokeStyle = accentGreen;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = accentGreen;
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+
+            // 8. Blips
+            blips.forEach(blip => {
+                const diff = (angle - blip.angle + Math.PI * 2) % (Math.PI * 2);
+                if (diff < 0.08) blip.alpha = 1;
+
+                if (blip.alpha > 0) {
+                    const bx = cx + (r * blip.radius) * Math.cos(blip.angle);
+                    const by = cy + (r * blip.radius) * Math.sin(blip.angle);
+
+                    // Dot
+                    ctx.fillStyle = blip.color;
+                    ctx.globalAlpha = blip.alpha;
+                    ctx.beginPath();
+                    ctx.arc(bx, by, 5, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // Label
+                    ctx.shadowBlur = 5;
+                    ctx.shadowColor = blip.color;
+                    ctx.fillText(blip.label, bx + 12, by - 12);
+                    ctx.shadowBlur = 0;
+                    ctx.globalAlpha = 1;
+
+                    blip.alpha -= 0.004;
+                }
+            });
+
+            // 9. Center Dot
+            ctx.fillStyle = cyanCol;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = cyanCol;
+            ctx.beginPath();
+            ctx.arc(cx, cy, 3, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.shadowBlur = 0;
+
+            angle += 0.015;
+            requestAnimationFrame(drawRadar);
+        }
+        drawRadar();
+
+        // --- SCROLL ANIMATIONS ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
